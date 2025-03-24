@@ -22,7 +22,6 @@
   line-height: 1.6;
 }
 
-/* Bouton de retour */
 .back-button {
   text-align: center;
   margin-top: 30px;
@@ -40,26 +39,4 @@
 
 .back-button button:hover {
   background-color: #45a049;
-}
-
-/* Animation du GIF */
-.privacy-gif {
-  position: fixed;
-  right: -150px; /* Caché à droite */
-  top: 50%;
-  transform: translateY(-50%);
-  width: 120px; /* Ajuste la taille si nécessaire */
-  opacity: 0; /* Invisible au début */
-  animation: slideIn 4s ease-in-out 3s forwards;
-}
-
-@keyframes slideIn {
-  0% {
-    right: -150px;
-    opacity: 0;
-  }
-  100% {
-    right: 20px; /* Position visible sans toucher le texte */
-    opacity: 1;
-  }
 }
