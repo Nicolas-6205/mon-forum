@@ -22,6 +22,7 @@
   line-height: 1.6;
 }
 
+/* Bouton de retour */
 .back-button {
   text-align: center;
   margin-top: 30px;
@@ -40,6 +41,8 @@
 .back-button button:hover {
   background-color: #45a049;
 }
+
+/* Animation du GIF */
 .privacy-gif {
   position: fixed;
   right: -150px; /* Caché à droite */
