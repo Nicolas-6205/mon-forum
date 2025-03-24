@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum Exemple</title>
+  <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+
+  <!-- Pop-up d'accord -->
+  <div id="popup">
+    <div class="popup-content">
+      <p>En accédant à ce site, vous acceptez notre <a href="#">contrat de confidentialité</a> et notre utilisation des cookies.</p>
+      <div class="popup-buttons">
+        <button class="accept" onclick="acceptCookies()">J'accepte</button>
+        <button class="reject" onclick="rejectCookies()">Je refuse</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header du forum -->
+  <header>
+    <h1>Forum Exemple</h1>
+  </header>
+
+  <!-- Contenu du forum -->
+  <div class="forum-container">
+    <div class="tabs">
+      <a href="http://bit.ly/4hGUvBl" class="tab">Discussion 1: Présentation</a>
+      <a href="http://bit.ly/4hGUvBl" class="tab">Discussion 2: Développement Web</a>
+      <a href="http://bit.ly/4hGUvBl" class="tab">Discussion 3: Programmation Python</a>
+    </div>
+    <div class="discussion-list">
+      <div class="discussion-item">
+        <h3><a href="http://bit.ly/4hGUvBl">Présentation des membres</a></h3>
+        <p>Une section où les membres peuvent se présenter et discuter de leur expérience.</p>
+      </div>
+      <div class="discussion-item">
+        <h3><a href="http://bit.ly/4hGUvBl">Développement Web : Comment commencer ?</a></h3>
+        <p>Si vous voulez vous lancer dans le développement web, venez poser vos questions ici !</p>
+      </div>
+      <div class="discussion-item">
+        <h3><a href="http://bit.ly/4hGUvBl">Python : Les bases pour débutants</a></h3>
+        <p>Un espace pour les débutants en Python, posez toutes vos questions ici.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Vérifier si l'utilisateur a accepté ou refusé
+    let cookiesAccepted = localStorage.getItem('cookiesAccepted');
+
+    // Si l'utilisateur n'a pas encore accepté ou refusé
+    if (cookiesAccepted === null) {
+      document.getElementById('popup').style.display = 'flex';
+    } else {
+      // Si accepté, on peut afficher le contenu
+      if (cookiesAccepted === 'true') {
+        document.body.style.opacity = '1';
+      }
+    }
+
+    // Fonction pour accepter les cookies et afficher le contenu
+    function acceptCookies() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('popup').style.display = 'none';
+      document.body.style.opacity = '1';
+    }
+
+    // Fonction pour refuser les cookies et bloquer l'accès
+    function rejectCookies() {
+      localStorage.setItem('cookiesAccepted', 'false');
+      document.getElementById('popup').style.display = 'none';
+      document.body.innerHTML = '<h1>Vous devez accepter les cookies pour accéder à ce site.</h1>';
+    }
+  </script>
+
+</body>
+</html>
