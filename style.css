@@ -1,0 +1,110 @@
+/* Style global de la page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* En-tête du forum */
+header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Conteneur du forum */
+.forum-container {
+  width: 80%;
+  margin: 30px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Onglets de discussion */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #ddd;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tab:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+/* Liste des discussions */
+.discussion-list {
+  margin-top: 20px;
+}
+
+.discussion-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.discussion-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* Style du pop-up */
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.popup-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.popup-buttons .accept {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.popup-buttons .reject {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
